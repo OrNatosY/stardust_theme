@@ -1,33 +1,19 @@
 {
-  "name": "theme-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/theme-sample",
-  "version": "0.0.3",
+  "name": "stardust-theme",
+  "author": "OrNatosY",
+  "url": "https://github.com/OrNatosY/stardust_theme",
+  "version": "0.0.1",
   "minAppVersion": "2.8.8",
   "displayName": {
-    "default": "Theme Sample",
-    "zh_CN": "主题示例"
+    "default": "Stardust Theme"
   },
   "description": {
-    "default": "This is a theme sample",
-    "zh_CN": "这是一个主题示例"
+    "default": "这是我的星辰主题"
   },
   "readme": {
-    "default": "README.md",
-    "zh_CN": "README_zh_CN.md"
-  },
-  "funding": {
-    "openCollective": "",
-    "patreon": "",
-    "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
+    "default": "README.md"
   },
   "modes": [
-    "light"
-  ],
-  "keywords": [
-    "sample", "示例"
+    "dark"
   ]
 }

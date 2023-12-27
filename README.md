@@ -1,15 +1,11 @@
-[中文](https://github.com/siyuan-note/theme-sample/blob/main/README_zh_CN.md)
+# 思源笔记主题示例
 
-# SiYuan theme sample
+## 开始
 
-## Get started
+* 通过 <kbd>Use this template</kbd> 按钮将该库文件复制到你自己的库中，请注意库名必须和主题名称一致，默认分支必须为 `main`
+* 将你的库克隆到本地开发文件夹中，为了方便可以直接将开发文件夹放置在 `{workspace}/conf/appearance/themes/` 下
 
-* Make a copy of this repo as a template with the <kbd>Use this template</kbd> button, please note that the repo name
-  must be the same as the theme name, the default branch must be `main`
-* Clone your repo to a local development folder. For convenience, you can place this folder in
-  your `{workspace}/conf/appearance/themes/` folder
-
-## Development
+## 开发
 
 * theme.json
 * icon.png (160*160)
@@ -17,8 +13,8 @@
 * README*.md
 * theme.css
 
-Note: The theme.js is deprecated, it will be removed in the future,
-see [this issue](https://github.com/siyuan-note/siyuan/issues/8178) for more details.
+注意：不要使用 theme.js
+机制，未来会移除对它的支持，详情请参考 [这个 issue](https://github.com/siyuan-note/siyuan/issues/8178)。
 
 ## theme.json
 
@@ -58,33 +54,32 @@ see [this issue](https://github.com/siyuan-note/siyuan/issues/8178) for more det
 }
 ```
 
-* `name`: Theme name, must be the same as the repo name, and must be unique globally (no duplicate theme names in the
-  marketplace)
-* `author`: Theme author name
-* `url`: Theme repo URL
-* `version`: Theme version number, it is recommended to follow the [semver](https://semver.org/) specification
-* `minAppVersion`: Minimum version number of SiYuan required to use this theme
-* `displayName`: Widget display name, mainly used for display in the marketplace list, supports multiple languages
-    * `default`: Default language, must exist
-    * `zh_CN`, `en_US` and other languages: optional, it is recommended to provide at least Chinese and English
-* `description`: Theme description, mainly used for display in the marketplace list, supports multiple languages
-    * `default`: Default language, must exist
-    * `zh_CN`, `en_US` and other languages: optional, it is recommended to provide at least Chinese and English
-* `readme`: readme file name, mainly used to display in the marketplace details page, supports multiple languages
-    * `default`: Default language, must exist
-    * `zh_CN`, `en_US` and other languages: optional, it is recommended to provide at least Chinese and English
-* `funding`: Theme sponsorship information
-    * `openCollective`: Open Collective name
-    * `patreon`: Patreon name
-    * `github`: GitHub login name
-    * `custom`: Custom sponsorship link list
-* `modes`: Theme mode list, currently only supports `light` and `dark`
-* `keywords`: Search keyword list, used for marketplace search function
+* `name`：主题名称，必须和库名一致，且全局唯一（集市中不能有重名主题）
+* `author`：主题作者名
+* `url`：主题仓库地址
+* `version`：主题版本号，建议遵循 [semver](https://semver.org/lang/zh-CN/) 规范
+* `minAppVersion`：主题支持的最低版本号，建议遵循 [semver](https://semver.org/lang/zh-CN/) 规范
+* `minAppVersion`：主题支持的最低思源笔记版本号
+* `displayName`：模板显示名称，主要用于模板集市列表中显示，支持多语言
+    * `default`：默认语言，必须存在
+    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
+* `description`：主题描述，主要用于主题集市列表中显示，支持多语言
+    * `default`：默认语言，必须存在
+    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
+* `readme`：自述文件名，主要用于主题集市详情页中显示，支持多语言
+    * `default`：默认语言，必须存在
+    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
+* `funding`：主题赞助信息
+    * `openCollective`：Open Collective 名称
+    * `patreon`：Patreon 名称
+    * `github`：GitHub 登录名
+    * `custom`：自定义赞助链接列表
+* `modes`：主题支持的模式列表，可选值为 `light` 和 `dark`
+* `keywords`：搜索关键字列表，用于集市搜索功能
 
-## Package
+## 打包
 
-No matter which method is used to compile and package, we finally need to generate a package.zip, which contains at
-least the following files:
+无论使用何种方式编译打包，我们最终需要生成一个 package.zip，它至少包含如下文件：
 
 * icon.png
 * preview.png
@@ -92,17 +87,16 @@ least the following files:
 * theme.css
 * theme.json
 
-## List on the marketplace
+## 上架集市
 
-* Generate the package.zip
-* Create a new GitHub release using your new version number as the "Tag version". See here for an
-  example: https://github.com/siyuan-note/theme-sample/releases
-* Upload the file package.zip as binary attachments
-* Publish the release
+* 生成 package.zip
+* 在 GitHub 上创建一个新的发布，使用主题版本号作为 “Tag
+  version”，示例 https://github.com/siyuan-note/theme-sample/releases
+* 上传 package.zip 作为二进制附件
+* 提交发布
 
-If it is the first release, please create a pull request to
-the [Community Bazaar](https://github.com/siyuan-note/bazaar) repository and modify the themes.json file in it. This
-file is the index of all community theme repositories, the format is:
+如果是第一次发布版本，还需要创建一个 PR 到 [Community Bazaar](https://github.com/siyuan-note/bazaar) 社区集市仓库，修改该库的
+themes.json。该文件是所有社区主题库的索引，格式为：
 
 ```json
 {
@@ -112,9 +106,7 @@ file is the index of all community theme repositories, the format is:
 }
 ```
 
-After the PR is merged, the bazaar will automatically update the index and deploy through GitHub Actions. When releasing
-a new version of the theme in the future, you only need to follow the above steps to create a new release, and you
-don't need to PR the community bazaar repo.
+PR 被合并以后集市会通过 GitHub Actions 自动更新索引并部署。后续发布新版本主题时只需要按照上述步骤创建新的发布即可，不需要再
+PR 社区集市仓库。
 
-Under normal circumstances, the community bazaar repo will automatically update the index and deploy every hour,
-and you can check the deployment status at https://github.com/siyuan-note/bazaar/actions.
+正常情况下，社区集市仓库每隔 1 小时会自动更新索引并部署，可在 https://github.com/siyuan-note/bazaar/actions 查看部署状态。

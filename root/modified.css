@@ -1,0 +1,56 @@
+:root {
+    /* 主色 */
+    --b3-theme-primary: #47dbdf;
+    --b3-theme-background: #1b3444;
+    --b3-theme-background-light: rgba(46, 226, 229, 0.392);
+    --b3-theme-surface: #1d465e;
+
+    /* 文字颜色 */
+    --b3-theme-on-background: rgba(224, 224, 219, 0.83);
+    --b3-theme-on-surface: #a4b8cc;
+    --b3-theme-on-surface-light: rgba(142, 195, 200, 0.66);
+
+    /* 顶部工具栏 */
+    --b3-toolbar-color: rgba(142, 195, 200, 0.66);
+    --b3-toolbar-hover:#2dafc5;
+
+    /* 线条 */
+    --b3-border-color: #143539;
+    --b3-border-radius: 4px;
+    --b3-border-radius-b: 4px;
+
+    /* 列表 */
+    --b3-list-hover: #2b6e83;
+    --b3-list-icon-hover:#2dafc5;
+
+    /* 菜单 */
+    --b3-menu-background: #196582;
+
+    /* 提示 */
+    --b3-tooltips-background: #39acc9;
+    --b3-tooltips-color: #ffffff;
+
+    /* 自定义文字 */
+    --b3-font-background5: #79858e;
+    --b3-font-background6: #0c6288;
+    --b3-font-background7: #726b4a;
+    --b3-font-background8: #805150;
+    --b3-font-background9: #7c365e;
+    --b3-font-background10: #6d4b80;
+    --b3-font-background11: #4c6f3d;
+    --b3-font-background12: #805d4c;
+    --b3-font-background13: #909ba0;
+
+    /* 所见即所得行内元素颜色 */
+    --b3-protyle-inline-mark-background: rgb(116 164 152);
+    --b3-protyle-inline-blockref-color: #a4e862;
+}
+
+/* https://github.com/siyuan-note/siyuan/issues/6440 */
+.protyle-action--order:after {
+    mix-blend-mode: screen;
+}
+
+.b3-text-field::-webkit-calendar-picker-indicator {
+    filter: invert(1)
+}
